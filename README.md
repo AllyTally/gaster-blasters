@@ -3,7 +3,7 @@ please, not another sans fight...
 
 !! if you encounter any issues, my discord is `Ally 🍦#1540` !!
 
-![cool imamge of thing](https://ringo.is-a-good-waifu.com/7N1pvcA.mp4)
+heres a video of it in action. https://ringo.is-a-good-waifu.com/7N1pvcA.mp4
 
 ok so this ones actually super straight forward
 
