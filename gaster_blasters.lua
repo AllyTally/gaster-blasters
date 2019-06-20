@@ -36,7 +36,7 @@ function self.New(x,y,x2,y2,angle,startangle)
     _blaster.angle = angle % 360
     _blaster.dorotation = 0
     _blaster.builderspd = 0
-    _blaster.holdfire = 60
+    _blaster.holdfire = 0
     if startangle then
         _blaster.dorotation = startangle
         _blaster.sprite.rotation = startangle
