@@ -32,6 +32,7 @@ function self.New(x,y,x2,y2,angle,startangle)
     _blaster.xscale = 1
     _blaster.yscale = 1
     _blaster.shootdelay = 40
+    _blaster.speed = 40
     _blaster.angle = angle % 360
     _blaster.dorotation = 0
     _blaster.builderspd = 0
@@ -84,15 +85,15 @@ function self.New(x,y,x2,y2,angle,startangle)
         else
             angle = _blaster.angle
         end
-        _blaster.dorotation = lerp(_blaster.dorotation,angle,6/_blaster.shootdelay)
+        _blaster.dorotation = lerp(_blaster.dorotation,angle,6/_blaster.speed)
         _blaster.sprite.rotation = _blaster.dorotation
         if _blaster.updatetimer > _blaster.shootdelay then
             _blaster.builderspd = _blaster.builderspd + 1
             _blaster.x = _blaster.x - (_blaster.builderspd * math.sin(math.rad(_blaster.sprite.rotation)))
             _blaster.y = _blaster.y - (-_blaster.builderspd * math.cos(math.rad(_blaster.sprite.rotation)))
         else
-            _blaster.x = lerp(_blaster.x,_blaster.x2,6/_blaster.shootdelay)
-            _blaster.y = lerp(_blaster.y,_blaster.y2,6/_blaster.shootdelay)
+            _blaster.x = lerp(_blaster.x,_blaster.x2,6/_blaster.speed)
+            _blaster.y = lerp(_blaster.y,_blaster.y2,6/_blaster.speed)
         end
 
         if (_blaster.updatetimer > _blaster.shootdelay) and (_blaster.updatetimer <= _blaster.shootdelay+8) then
