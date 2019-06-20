@@ -36,6 +36,7 @@ function self.New(x,y,x2,y2,angle,startangle)
     _blaster.angle = angle % 360
     _blaster.dorotation = 0
     _blaster.builderspd = 0
+    _blaster.holdfire = 60
     if startangle then
         _blaster.dorotation = startangle
         _blaster.sprite.rotation = startangle
@@ -85,27 +86,30 @@ function self.New(x,y,x2,y2,angle,startangle)
         else
             angle = _blaster.angle
         end
-        _blaster.dorotation = lerp(_blaster.dorotation,angle,6/_blaster.speed)
-        _blaster.sprite.rotation = _blaster.dorotation
-        if _blaster.updatetimer > _blaster.shootdelay then
+        if (_blaster.updatetimer > _blaster.shootdelay) and (_blaster.updatetimer > (_blaster.shootdelay)+_blaster.holdfire) then
+            _blaster.sprite.rotation = angle
             _blaster.builderspd = _blaster.builderspd + 1
             _blaster.x = _blaster.x - (_blaster.builderspd * math.sin(math.rad(_blaster.sprite.rotation)))
             _blaster.y = _blaster.y - (-_blaster.builderspd * math.cos(math.rad(_blaster.sprite.rotation)))
         else
             _blaster.x = lerp(_blaster.x,_blaster.x2,6/_blaster.speed)
             _blaster.y = lerp(_blaster.y,_blaster.y2,6/_blaster.speed)
+            _blaster.dorotation = lerp(_blaster.dorotation,angle,6/_blaster.speed)
+            _blaster.sprite.rotation = _blaster.dorotation
         end
 
         if (_blaster.updatetimer > _blaster.shootdelay) and (_blaster.updatetimer <= _blaster.shootdelay+8) then
             _blaster.beam.sprite.yscale = _blaster.beam.sprite.yscale + 0.125*_blaster.xscale
         end
-        if _blaster.updatetimer > _blaster.shootdelay+8 then
+        if (_blaster.updatetimer > _blaster.shootdelay+8) and (_blaster.updatetimer > (_blaster.shootdelay+8)+_blaster.holdfire) then
             if _blaster.beam.sprite.yscale > 0 then
                 _blaster.beam.sprite.yscale = _blaster.beam.sprite.yscale - 0.125*_blaster.xscale
             else
                 _blaster.beam.sprite.yscale = 0
             end
-            _blaster.beam.sprite.alpha = _blaster.beam.sprite.alpha - 0.05
+            if (_blaster.updatetimer > (_blaster.shootdelay+_blaster.holdfire)) then
+                _blaster.beam.sprite.alpha = _blaster.beam.sprite.alpha - 0.05
+            end
             if ((_blaster.x < -20) or (_blaster.x > 660) or (_blaster.y < -20) or (_blaster.y > 500)) and (_blaster.beam.sprite.alpha == 0) then
                 _blaster.Destroy()
                 return
@@ -140,6 +144,12 @@ function self.New(x,y,x2,y2,angle,startangle)
     return _blaster
 end
 
+function self.Update()
+    for i = #self.blasters, 1, -1 do
+        self.blasters[i].Update()
+    end
+end
+
 local _Update = Update
 function Update()
     for i = #self.blasters, 1, -1 do
@@ -160,4 +170,4 @@ function EndingWave()
     end
 end
 
-blaster = self
+return self
