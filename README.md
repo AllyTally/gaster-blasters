@@ -7,11 +7,13 @@ heres a video of it in action. https://ringo.is-a-good-waifu.com/7N1pvcA.mp4
 
 ok so this ones actually super straight forward
 
-throw `require "Libraries/gaster_blasters"` at the top of your wave script
+throw `blasters = require "Libraries/gaster_blasters"` at the top of your wave script
 
-to create a gaster blaster, use blaster.New
+throw `blasters.Update()` somewhere in your update function, you should probably put that at the top
 
-`blaster.New(start_x,start_y,goto_x,goto_y,rotation,startrotation=0) returns GasterBlaster`
+to create a gaster blaster, use blasters.New
+
+`blasters.New(start_x,start_y,goto_x,goto_y,rotation,startrotation=0) returns GasterBlaster`
 
 start_x and start_y are where the gaster blaster spawns, this is normally off screen
 
