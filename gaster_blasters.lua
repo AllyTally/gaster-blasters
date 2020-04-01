@@ -1,7 +1,7 @@
 --[[
     gaster_blasters.lua, a gaster blaster library for Create Your Frisk
-    https://github.com/Luigimaster1/gaster-blasters/
-    Copyright (C) 2019  Alexia Tilde
+    https://github.com/AllyTally/gaster-blasters/
+    Copyright (C) 2019-2020  Alexia Tilde
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
