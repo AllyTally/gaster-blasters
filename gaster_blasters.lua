@@ -37,6 +37,7 @@ function self.New(x,y,x2,y2,angle,startangle)
     _blaster.dorotation = 0
     _blaster.builderspd = 0
     _blaster.holdfire = 0
+    _blaster.silent = false
     if startangle then
         _blaster.dorotation = startangle
         _blaster.sprite.rotation = startangle
@@ -50,7 +51,9 @@ function self.New(x,y,x2,y2,angle,startangle)
         _blaster.beam.ppcollision = true
         _blaster.beam.sprite.yscale = 1.75*_blaster.xscale
         _blaster.CalculateBeamPosition()
-        Audio.PlaySound("gasterfire")
+        if not _blaster.silent then
+            Audio.PlaySound("gasterfire")
+        end
     end
 
     function _blaster.CalculateBeamPosition()
