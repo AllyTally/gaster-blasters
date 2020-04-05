@@ -18,7 +18,7 @@ local self = {}
 
 self.blasters = {}
 
-function self.New(x,y,x2,y2,angle,startangle)
+function self.New(x,y,x2,y2,angle,startangle,silent)
     local _blaster = {}
     _blaster.sprite = CreateSprite("blaster/spr_gasterblaster_0","Top")
     _blaster.sprite.Scale(2,2)
@@ -37,12 +37,17 @@ function self.New(x,y,x2,y2,angle,startangle)
     _blaster.dorotation = 0
     _blaster.builderspd = 0
     _blaster.holdfire = 0
-    _blaster.silent = false
+    _blaster.silent = silent
+    if (silent == nil) then
+        _blaster.silent = false
+    end
     if startangle then
         _blaster.dorotation = startangle
         _blaster.sprite.rotation = startangle
     end
-    Audio.PlaySound("gasterintro") 
+    if not _blaster.silent then
+        Audio.PlaySound("gasterintro") 
+    end
 
     function _blaster.SpawnBeam()
         _blaster.beam = CreateProjectileAbs("blaster/beam",0,0)
