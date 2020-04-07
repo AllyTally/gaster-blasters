@@ -9,7 +9,7 @@ ok so this ones actually super straight forward
 
 throw `blasters = require "Libraries/gaster_blasters"` at the top of your wave script
 
-throw `blasters.Update()` somewhere in your update function, you should probably put that at the top
+throw `blasters.Update()` somewhere in your update function, you should probably put that at the bottom
 
 to create a gaster blaster, use blasters.New
 
