@@ -55,6 +55,7 @@ function self.New(x,y,x2,y2,angle,startangle,silent)
         _blaster.beam.sprite.Scale(2,2*_blaster.yscale)
         _blaster.beam.ppcollision = true
         _blaster.beam.sprite.yscale = 1.75*_blaster.xscale
+        _blaster.beam["blaster"] = true
         _blaster.CalculateBeamPosition()
         if not _blaster.silent then
             Audio.PlaySound("gasterfire")
