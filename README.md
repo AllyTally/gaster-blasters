@@ -1,6 +1,8 @@
 # gaster-blasters
 please, not another sans fight...
 
+## HI IF YOU USE THIS PLEASE CREDIT ME FOR SOME REASON PEOPLE DONT
+
 !! if you encounter any issues, my discord is `Ally 🌠#1540` !!
 
 heres a video of it in action. https://ringo.is-a-good-waifu.com/7N1pvcA.mp4
