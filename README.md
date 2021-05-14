@@ -10,7 +10,7 @@ heres a video of it in action. https://ringo.is-a-good-waifu.com/7N1pvcA.mp4
 
 ✨✨✨ HOW TO USE ✨✨✨
 
-throw `blasters = require ("Libraries/gaster_blasters")` at the top of your wave script
+throw `blasters = require ("Libraries/gaster_blasters")` at the bottom of your wave script
 
 throw `blasters.Update()` somewhere in your update function, you should probably put that at the bottom
 
