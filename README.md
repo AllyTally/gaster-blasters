@@ -1,6 +1,10 @@
 # gaster-blasters
 please, not another sans fight...
 
+## "THE LIBRARY DOESN'T WORK"
+
+yes, it does. there's a lot of people who use it. you're just using it wrong. stop blaming my library and just ask for help on the unitale server, thanks.
+
 ## HI IF YOU USE THIS PLEASE CREDIT ME FOR SOME REASON PEOPLE DONT
 
 !! if you encounter any issues, my discord is `Ally 🌠#1540` !!
