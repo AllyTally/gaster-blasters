@@ -7,7 +7,7 @@ yes, it does. there's a lot of people who use it. you're just using it wrong. st
 
 ## HI IF YOU USE THIS PLEASE CREDIT ME FOR SOME REASON PEOPLE DONT
 
-!! if you encounter any issues, my discord is `Ally 🌠#1540` !!
+!! if you encounter any issues WITH THE LIBRARY ITSELF, my discord is `Ally 🌠#1540`. i will not be giving help to people that aren't using the library correctly !!
 
 heres a video of it in action. https://ringo.is-a-good-waifu.com/7N1pvcA.mp4
 
